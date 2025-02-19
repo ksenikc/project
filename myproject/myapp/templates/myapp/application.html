@@ -1,0 +1,117 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+
+{% block title %}
+Заявки
+{% endblock %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+{% if user.is_superuser %}
+
+<div class="container">
+    <h2 class="hh">Заявки | АДМИНКА</h2>
+    <form action="{% url 'application' %}">
+        <button class="ooo">Обновить</button>
+    </form>
+    <form method="get" class="filter-form">
+        {{ filter.form.as_p }}
+        <button type="submit" class="ooo">Фильтровать</button>
+    </form>
+    <div class="ap">
+        {% if filter.qs %}
+
+        {% for elem in filter.qs %}
+        <div class="aplic">
+            <div class="aplic_item">
+                <img src="../media/{{ elem.photo }}" alt="">
+                <div class="rrr">
+                    <p>Дата создания</p>
+                    <p>{{ elem.date }}</p>
+                </div>
+                <div class="rrr">
+                    <p>Название</p>
+                    <p>{{ elem.title }}</p>
+                </div>
+                <div class="rrr">
+                    <p>Категория</p>
+                    <p>{{ elem.categor }}</p>
+                </div>
+                <div class="rrr">
+                    <p>Статус</p>
+                    <p>{{ elem.stat }}</p>
+                </div>
+                <div class="rrr">
+                    <p>Пользователь</p>
+                    <p>{{ elem.owner }}</p>
+                </div>
+                <div class="rrr">
+                    <button onclick="location.href = '{% url 'app_decision' elem.id %}'">Решить</button>
+                    <button onclick="location.href = '{% url 'app_deviation' elem.id %}'">Отклонить</button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+
+{% else %}
+<p>У нас нет записей</p>
+
+{% endif %}
+
+</div>
+
+{% else %}
+
+<div class="container">
+
+    <div class="ap">
+        {% if filter.qs %}
+
+        {% for elem in filter.qs %}
+        <div class="aplic">
+            <div class="aplic_item">
+                <img src="../media/{{ elem.photo }}" alt="">
+                <div class="rrr">
+                    <p>Дата создания</p>
+                    <p>{{ elem.date }}</p>
+                </div>
+                <div class="rrr">
+                    <p>Название</p>
+                    <p>{{ elem.title }}</p>
+                </div>
+                <div class="rrr">
+                    <p>Категория</p>
+                    <p>{{ elem.categor }}</p>
+                </div>
+                <div class="rrr">
+                    <p>Статус</p>
+                    <p>{{ elem.stat }}</p>
+                </div>
+                <div class="rrr">
+                    <p>Пользователь</p>
+                    <p>{{ elem.owner }}</p>
+                </div>
+                <div class="rrr">
+                    <button onclick="location.href = '{% url 'app_delete' elem.id %}'">Удалить</button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+{% else %}
+<p>У нас нет записей</p>
+{% endif %}
+</div>
+
+{% endif %}
+{% else %}
+<a href="/login">Авторизация</a>
+{% endif %}
+{% endblock %}

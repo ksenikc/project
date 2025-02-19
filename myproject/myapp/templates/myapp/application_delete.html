@@ -1,0 +1,13 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="del">
+    <h1>Удалить заявку</h1>
+    <form action="" method="post" class="formss">{% csrf_token %}
+        <p>Действительно ли вы хотите удалить заявку?</p>
+        <input type="submit" value="Удалить"/>
+    </form>
+        </div>
+</div>
+{% endblock content %}

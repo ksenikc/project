@@ -1,0 +1,74 @@
+{% extends "myapp/base.html" %}
+{% block content %}
+{% load static %}
+<div class="container">
+    <div class="counter">
+        <div class="counter" id="solvedCounter"><p>Счётчик заявок: {{ solved_count }} </p></div>
+    </div>
+    {% if user.is_superuser %}
+    <div class="button">
+        <input type="button" value="Добавить заявку" class="new" onclick="location.href = '{% url 'newproduct' %}'">
+    </div>
+    {% else %}
+    <div class="button">
+        <input type="button" value="Сформировать заявку" class="new" onclick="location.href = '{% url 'newproduct' %}'">
+    </div>
+    {% endif %}
+
+    <p class="zag">Решённые заявки</p>
+    {% if posts %}
+
+    <div class="application">
+        {% for post in posts %}
+        <div class="application_item">
+            <div class="wrapper-img">
+                <img src="media/{{ post.image_after }}">
+                <img src="media/{{ post.photo }}" class="img-hide">
+            </div>
+
+            <p>Дата создания: {{ post.date }}</p>
+            <p>Название: {{ post.title }}</p>
+            <p>Описание: {{ post.description }}</p>
+            <p>Категория: {{ post.categor }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p>Нет записей</p>
+    {% endif %}
+</div>
+<script>
+    function updateCounter() {
+        fetch('/get_solved_count/')
+            .then(response => response.json())
+            .then(data => {
+                const counterElement = document.getElementById('solvedCounter');
+                const currentCount = parseInt(counterElement.textContent);
+                const newCount = data.count;
+
+                if (currentCount !== newCount) {
+                    counterElement.textContent = newCount;
+
+                    // Добавляем анимацию при изменении числа
+                    counterElement.classList.add('counter-update');
+                    setTimeout(() => {
+                        counterElement.classList.remove('counter-update');
+                    }, 500);
+                }
+            });
+    }
+
+        // Запускаем обновление каждые 5 секунд
+        setInterval(updateCounter, 5000);
+
+        // Добавляем анимацию появления карточек
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.solution-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('fade-in');
+                }, index * 100);
+            });
+        });
+</script>
+{% endblock content %}

@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Обязательные мета-теги -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap, иконки и шрифт -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+
+</head>
+<body>
+<header>
+    <div class="container">
+        <img class="logo" src="{% static 'img/logo.png'%}" href="{% url 'home' %}">
+        <p class="com"><a href="{% url 'home' %}">Сделаем лучше всех!</a></p>
+        <nav>
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'application' %}">Заявки</a></li>
+            <li><a href="{% url 'logout' %}">Выход</a></li>
+            <li><a href="{% url 'profile' %}">Профиль</a></li>
+            {% else %}
+            <li><a href="{% url 'login' %}">Вход</a></li>
+            <li><a href="{% url 'register' %}">Регистрация</a></li>
+            {% endif %}
+        </nav>
+    </div>
+</header>
+
+{% block content %}{% endblock %}
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{% static 'app.js' %}"></script>
+
+</body>
+</html>
