@@ -1,0 +1,14 @@
+{% extends "myapp/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="content-section">
+    <form method="POST">
+        {% csrf_token %}
+            <div class="form">
+            <div class="vhod">{{ form|crispy }}
+                <button type="submit"><b>Войти</b></button>
+            </div>
+</div>
+    </form>
+</div>
+{% endblock content %}

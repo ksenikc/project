@@ -1,0 +1,11 @@
+{% extends "myapp/base.html" %}
+{% block content %}
+    <div class="container">
+        <div class="vihod">
+            <div class="vih">
+                <p>Вы вышли из своей учётной записи</p>
+                <button onclick="location.href = '{% url 'login'  %}'" class="vihoo">ВОЙТИ</button>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
