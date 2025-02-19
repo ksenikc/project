@@ -1,0 +1,551 @@
+* {
+    font-family: 'Manrope';
+    font-size: 14px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+}
+
+.container {
+    width: 1200px;
+    margin: 0;
+    padding-top:30px;
+}
+.wrapper-img{
+    position: relative;
+    max-width: 300px;
+    max-height:170px;
+}
+.wrapper-img .img-hide{
+    opacity: 0;
+}
+
+.wrapper-img:hover .img-hide{
+    opacity: 1;
+    position: absolute; top: 0; left: 0;
+    transition: all 0.5s ease-in-out;
+}
+.del {
+    margin-left:50px;
+    text-align:center;
+    margin-top:200px;
+
+}
+.vihoo input {
+     background-color: #9768D1;
+    border-radius: 30px;
+    border: none;
+    width: 160px;
+    height: 40px;
+    margin-top: 34px;
+}
+.logo {
+    width: 107px;
+    height: 67px;
+    margin-top: 43px;
+    margin-bottom: 14px;
+}
+
+header {
+    float: left;
+    background-color: #BDF6F4;
+    min-height: 100vh;
+    width: 200px;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding-left: 54px;
+}
+
+nav {
+    margin-top: 136px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+
+}
+
+li {
+    list-style-type: none;
+    padding-top: 23px;
+}
+
+/*ГЛАВНАЯ*/
+.counter p {
+    padding-top: 79px;
+    margin-left: 230px;
+}
+
+.button input {
+    background-color: #9768D1;
+    border-radius: 20px;
+    border: none;
+    width: 187px;
+    height: 41px;
+    margin-left: 70px;
+    margin-top: 49px;
+}
+
+.zag {
+    font-size: 16px;
+    text-align: center;
+}
+
+.com {
+    margin-left: -45px;
+    margin-right:10px;
+}
+.application {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    gap: 45px;
+    margin-top: 45px;
+}
+.application_item img {
+    width: 153px;
+    height: 119px;
+    margin-top: 31px;
+    margin-left: 33px;
+    margin-bottom: 15px;
+}
+
+.application_item p {
+
+    margin-left: 33px;
+}
+
+.application_item {
+    width: 220px;
+    height: 279px;
+    border: 1px solid black;
+    margin-left: 237px;
+    border-radius: 10px;
+}
+
+.aplic {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 350px);
+    gap: 45px;
+    margin-top: 30px;
+}
+
+/*ВХОД*/
+.form {
+    padding-top: 166px;
+}
+
+.vhod {
+    width: 438px;
+    height: 372px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+    padding-top:80px;
+}
+
+.vhod input {
+    width: 358px;
+    height: 40px;
+}
+#hint_id_username,#hint_id_password1 ,#hint_id_password2{
+    display:none;
+}
+
+.vhod p {
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+.vhod button {
+    background-color: #9768D1;
+    border-radius: 30px;
+    border: none;
+    width: 160px;
+    height: 40px;
+    margin-top: 34px;
+}
+
+/*Регистрация*/
+.forms {
+    padding-top: 88px;
+}
+
+.redister {
+    width: 438px;
+    height: 703px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.redister input {
+    width: 358px;
+    height: 40px;
+    margin-top:30px;
+}
+.form-group {
+    margin-top:20px;
+}
+checkbox {
+    margin-left:-30px;
+}
+.redister label {
+    font-size: 16px;
+    padding-top: 50px;
+}
+
+.redister button {
+    background-color: #9768D1;
+    border-radius: 30px;
+    border: none;
+    width: 160px;
+    height: 40px;
+    margin-top: 34px;
+}
+
+.knop {
+    display: flex;
+}
+
+.knop p {
+    margin-top: 42px;
+    font-size: 14px;
+    margin-left:-30px;
+}
+
+.knop input {
+    width: 30px;
+    height: 30px;
+    margin-left: 40px;
+    margin-top: 32px;
+}
+
+/*Выход*/
+.forms {
+    padding-top: 88px;
+}
+
+.vih {
+    width: 438px;
+    height: 198px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.vihod {
+    padding-top: 238px;
+}
+
+.vih p {
+    margin-top: 50px;
+}
+
+.vih button {
+    background-color: #9768D1;
+    border-radius: 30px;
+    border: none;
+    width: 160px;
+    height: 40px;
+    margin-top: 34px;
+}
+
+/*Формирование заявки*/
+.formss {
+    padding-top: 88px;
+}
+
+.app {
+    width: 438px;
+    height: 570px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 0;
+}
+
+.app {
+    padding-top: 30px;
+}
+
+.app p {
+    margin-top: 20px;
+}
+
+.app button {
+    background-color: #9768D1;
+    border-radius: 30px;
+    border: none;
+    width: 160px;
+    height: 40px;
+    margin-top: 34px;
+}
+
+.photo {
+    width: 155px;
+    height: 40px;
+    border: 1px solid black;
+    padding-top: 10px;
+}
+
+.app select,
+input {
+    width: 358px;
+    height: 40px;
+}
+
+
+/*Заявки*/
+.user p {
+    padding-top: 40px;
+    margin-left: 200px;
+    font-size: 20px;
+}
+
+.sform {
+    background-color: #9768D1;
+    border-radius: 20px;
+    border: none;
+    width: 187px;
+    height: 41px;
+    margin-left: 40px;
+    margin-top: 49px;
+    margin-bottom: 48px;
+}
+
+.ooo {
+    width:148px;
+    height:33px;
+    background-color: #9768D1;
+    border:none;
+    border-radius:25px;
+}
+
+.ap {
+    margin: 0;
+    display: grid;
+    grid-template-columns:  450px 450px;
+    gap: 45px;
+    padding-top: 45px;
+    padding-left:100px;
+}
+
+.aplic_item {
+    width: 348px;
+    height: 432px;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.aplic_item img {
+    width: 225px;
+    height: 112px;
+    margin-top: 20px;
+}
+
+.rrr {
+    display: flex;
+    margin-top: 30px;
+}
+
+.but {
+    display: flex;
+    border: 1px solid black;
+    width: 123px;
+    height: 32px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.filter {
+    display: flex;
+}
+
+.filter input {
+    width: 130px;
+    height: 30px;
+}
+
+.filter button {
+    background-color: #9768D1;
+    border-radius: 20px;
+    border: none;
+    width: 148px;
+    height: 33px;
+    margin-left: 40px;
+    margin-top: 30px;
+    margin-bottom: 48px;
+}
+.filter-form {
+    display:flex;
+    width:727px;
+}
+.filter-form input,select{
+    width:130px;
+    height:30px;
+}
+
+
+
+/*Адаптив ГЛАВНОЙ */
+@media (max-width: 720px) {
+    .container {
+        width: 720px;
+        height: 1440px;
+    }
+
+    header {
+        height: 200vh;
+    }
+
+    .counter p {
+        margin-left: 220px;
+    }
+
+    .button button {
+        margin-left: 15px;
+    }
+
+    .zag {
+        margin-top: 40px;
+    }
+
+    .aplic {
+        grid-template-columns: repeat(1, 250px);
+    }
+
+    .aplic_item {
+        margin-left: 150px;
+    }
+}
+
+/*Адаптив ВХОДА */
+@media (max-width: 720px) {
+    .vhod {
+        width: 354px;
+        height: 301px;
+    }
+    .vhod input {
+        width: 287px;
+        height: 32px;
+    }
+
+    .vhod p {
+        margin-top: 20px;
+    }
+
+    .vhod button {
+        width: 129px;
+        height: 33px;
+    }
+    .form {
+        width: 354px;
+        margin-left: 280px;
+    }
+}
+/*Адаптив РЕГИСТРАЦИИ */
+@media (max-width: 720px) {
+    .redister {
+        
+        width: 376px;
+        height: 604px;
+    }
+    .redister input {
+        width: 287px;
+        height: 32px;
+    }
+
+    .redister p {
+        margin-top: 40px;
+        font-size: 14px;
+    }
+
+    .redister button {
+        width: 137px;
+        height: 34px;
+    }
+    .forms {
+        width: 376px;
+        margin-left: 280px;
+        padding-top: 140px;
+    }
+    .knop input{
+        width: 34px;
+        height: 34px;
+    }
+    .knop p{
+        font-size: 12px;
+        margin-top: 40px;
+    }
+}
+
+
+/*Адаптив ЗАЯВКИ */
+@media (max-width: 720px) {
+   .user p {
+    margin-left: 220px;
+   }
+   .sform {
+    margin-left: 20px;
+   }
+   .filter {
+    flex-wrap: wrap;
+   }
+   .applications {
+    flex-wrap: wrap;
+   }
+   .applications_item {
+    margin-top: 50px;
+   }
+}
+
+/*Адаптив ВЫХОДА */
+@media (max-width: 720px) {
+    .vihod {
+        margin-left: 200px;
+    }
+    .vih {
+        width: 347px;
+        height: 157px;
+    }
+
+    .vih button {
+        width: 127px;
+        height: 31px;
+    }
+}
+
+/*Адаптив ФОРМИРОВАНИЯ ЗАЯВКИ */
+@media (max-width: 720px) {
+    .formss {
+        margin-left: 200px;
+    }
+    .app {
+        width: 341px;
+        height: 426px;
+    }
+    .app select, input {
+        width: 280px;
+        height: 31px;
+    }
+    .app p {
+        margin-top: 5px;
+    }
+    .app button {
+        width: 125px;
+        height: 31px;
+        margin-top: 20px;
+    }
+    .photo {
+        width: 121px;
+        height: 31px;
+        padding-top: 5px;
+    }
+}
