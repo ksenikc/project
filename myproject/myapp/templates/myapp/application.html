@@ -96,9 +96,13 @@
                     <p>Пользователь</p>
                     <p>{{ elem.owner }}</p>
                 </div>
+                  <!-- Условие для отображения кнопки -->
+
+                {% if elem.stat.title == 'Новое' %}
                 <div class="rrr">
                     <button onclick="location.href = '{% url 'app_delete' elem.id %}'">Удалить</button>
                 </div>
+                {% endif %}
             </div>
         </div>
         {% endfor %}
